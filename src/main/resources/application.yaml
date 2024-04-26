@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: springazureeventgrid
+  cloud:
+    azure:
+      eventgrid:
+        endpoint: https://account<<>>>>>>vents
+        key: 7nWSlV7qGw<<>>>>K309QM2Lx4=
+      servicebus:
+        connection-string: Endpoint=sb://accountsser<<>>>>>>=
+    function:
+      definition: consume
+    stream:
+      bindings:
+        consume-in-0:
+          destination: sbq
+      servicebus:
+        bindings:
+          consume-in-0:
+            consumer:
+              auto-complete: false
